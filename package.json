@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "build": "rbxtsc && cpx \"include/**\" out/include && cpx \"node_modules/**/*.lua\" out/include/node_modules -L && tape out",
-    "clean": "rimraf out"
+    "clean": "rimraf out",
+    "prepack": "pnpm clean && rbxtsc"
   },
   "devDependencies": {
     "@rbxts/compiler-types": "2.0.4-types.1",
