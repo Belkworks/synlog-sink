@@ -35,5 +35,9 @@
     "@belkworks/synlog": "^3.0.1",
     "@rbxts/log": "^0.6.3",
     "@rbxts/message-templates": "^0.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Belkworks/synlog-sink.git"
   }
 }
