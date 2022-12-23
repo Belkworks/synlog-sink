@@ -1,10 +1,20 @@
 {
   "name": "@belkworks/synlog-sink",
   "version": "0.0.1",
+  "main": "out/init.lua",
+  "types": "out/index.d.ts",
   "scripts": {
     "build": "rbxtsc && cpx \"include/**\" out/include && cpx \"node_modules/**/*.lua\" out/include/node_modules -L && tape out",
     "clean": "rimraf out",
     "prepack": "pnpm clean && rbxtsc"
+  },
+  "files": [
+    "out",
+    "!**/*.tsbuildinfo"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
   },
   "devDependencies": {
     "@rbxts/compiler-types": "2.0.4-types.1",
