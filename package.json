@@ -1,5 +1,6 @@
 {
   "name": "@belkworks/synlog-sink",
+  "version": "0.0.1",
   "scripts": {
     "build": "rbxtsc && cpx \"include/**\" out/include && cpx \"node_modules/**/*.lua\" out/include/node_modules -L && tape out",
     "clean": "rimraf out"
