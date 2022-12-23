@@ -1,0 +1,2 @@
+
+# synlog-sink
