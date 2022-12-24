@@ -4,7 +4,7 @@
   "main": "out/init.lua",
   "types": "out/index.d.ts",
   "scripts": {
-    "build": "rbxtsc && cpx \"include/**\" out/include && cpx \"node_modules/**/*.lua\" out/include/node_modules -L && tape out",
+    "build": "rbxtsc --type=model && cpx \"include/**\" out/include && cpx \"node_modules/**/*.lua\" out/include/node_modules -L && tape out",
     "clean": "rimraf out",
     "prepack": "pnpm clean && rbxtsc"
   },
