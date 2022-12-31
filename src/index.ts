@@ -37,6 +37,11 @@ type SinkOptions = {
 	};
 };
 
+const isQuote = (str: string) => {
+	const len = str.size();
+	return str.sub(1, 1) === '"' && str.sub(len, len) === '"';
+};
+
 function sink(logger: DrawingLogger, opts: SinkOptions = {}) {
 	const labelOpts = opts?.label;
 	const labelItalic = labelOpts?.italic ?? true;
@@ -54,14 +59,14 @@ function sink(logger: DrawingLogger, opts: SinkOptions = {}) {
 				case "number":
 					return Text.color(str, Colors.Mint);
 				case "string":
-					// TODO: check if string is wrapped in quotes
+					if (isQuote(str)) return Text.color(str, Colors.Mint);
 					return Text.white(str);
 				default:
 					return Text.color(str, Colors.Grey);
 			}
 		});
 
-		const prefix = log.SourceContext;
+		const prefix = tostring(log.SourceContext);
 		if (prefix !== undefined) tokens.unshift(Text.color(`[${prefix}] `, Colors.Grey));
 
 		tokens.unshift({
