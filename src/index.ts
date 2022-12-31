@@ -66,7 +66,7 @@ function sink(logger: DrawingLogger, opts: SinkOptions = {}) {
 			}
 		});
 
-		const prefix = tostring(log.SourceContext);
+		const prefix = log.SourceContext !== undefined ? tostring(log.SourceContext) : undefined;
 		if (prefix !== undefined) tokens.unshift(Text.color(`[${prefix}] `, Colors.Grey));
 
 		tokens.unshift({
