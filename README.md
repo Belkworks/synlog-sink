@@ -5,13 +5,7 @@ A log sink for [`rbx-log`](https://github.com/roblox-aurora/rbx-log) that writes
 
 ## Prerequisites
 
-Ensure the following line is in your `.npmrc`:
-
-```ini
-@belkworks:registry=https://npm.pkg.github.com
-```
-
-Example available [here](https://github.com/Belkworks/synlog-sink/blob/master/.npmrc).
+See [Project Setup](https://gist.github.com/safazi/b9db41b9e6517f95b0932b29aeb57df9)
 
 ## Installation
 
